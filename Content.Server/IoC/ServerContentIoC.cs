@@ -1,3 +1,4 @@
+using Content.Server._Monkestation.Administration.Managers;
 using Content.Server.Administration;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
@@ -84,5 +85,9 @@ internal static class ServerContentIoC
         deps.Register<DiscordChatLink>();
         deps.Register<ServerFeedbackManager>();
         deps.Register<ISharedFeedbackManager, ServerFeedbackManager>();
+
+        // Monkestation start
+        deps.Register<RoleTimeExemptionManager>();
+        // Monkestation end
     }
 }

@@ -52,7 +52,6 @@ namespace Content.Server.Database
 
         // Monkestation Begin
         public DbSet<MonkestationRoleTimeExemption> MonkestationRoleTimeExemptions { get; set; } = default!;
-        public DbSet<MonkestationRoleTimeExemptionRole> MonkestationRoleTimeExemptionRoles { get; set; } = default!;
         // Monkestation End
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -306,16 +305,7 @@ namespace Content.Server.Database
 
             // Monkestation Begin
             modelBuilder.Entity<MonkestationRoleTimeExemption>()
-                .HasIndex(e => e.UserId)
-                .IsUnique();
-            modelBuilder.Entity<MonkestationRoleTimeExemptionRole>()
-                .HasIndex(r => new { r.RoleType, r.RoleId, r.ExemptionId })
-                .IsUnique();
-            modelBuilder.Entity<MonkestationRoleTimeExemption>()
-                .HasMany(e => e.Roles)
-                .WithOne(r => r.Exemption)
-                .IsRequired()
-                .OnDelete(DeleteBehavior.Cascade);
+                .HasIndex(e => e.UserId);
             // Monkestation End
         }
 
@@ -1084,27 +1074,11 @@ namespace Content.Server.Database
         public float Score { get; set; }
     }
 
-
     // Begin Monkestation
     /// <summary>
-    /// Exemptions for play time for a player
+    /// Exemptions for play time for a role for a player
     /// </summary>
     public class MonkestationRoleTimeExemption
-    {
-        public int Id { get; set; }
-
-        /// <summary>
-        /// The user ID of the banned player.
-        /// </summary>
-        public Guid UserId { get; set; }
-
-        public List<MonkestationRoleTimeExemptionRole>? Roles { get; set; }
-    }
-
-    /// <summary>
-    /// The specific roles for whic the exemption has been issued
-    /// </summary>
-    public class MonkestationRoleTimeExemptionRole
     {
         public int Id { get; set; }
 
@@ -1119,12 +1093,9 @@ namespace Content.Server.Database
         public required string RoleId { get; set; }
 
         /// <summary>
-        /// The ID of the exemption to which this applies.
+        /// The userid this exemption applies to
         /// </summary>
-        [ForeignKey(nameof(MonkestationRoleTimeExemption))]
-        public int ExemptionId { get; set; }
-
-        public MonkestationRoleTimeExemption? Exemption { get; set; }
+        public required Guid UserId { get; set; }
     }
     // End Monkestation
 }

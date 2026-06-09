@@ -1,3 +1,4 @@
+using Content.Shared._Monkestation.Players;
 using Content.Shared.Eui;
 using Content.Shared.Roles;
 using Robust.Shared.Prototypes;
@@ -8,14 +9,13 @@ namespace Content.Shared._Monkestation.Administration;
 [Serializable, NetSerializable]
 public sealed class RoleTimeExemptionPanelEuiState(
     string playerName,
-    ProtoId<JobPrototype>[] jobExemptions,
-    ProtoId<AntagPrototype>[] antagExemptions,
+    RoleTimeExemptionsData? exemptions,
     bool hasAdmin)
     : EuiStateBase
 {
     public string PlayerName { get; set; } = playerName;
-    public ProtoId<JobPrototype>[] JobExemptions { get; set; } = jobExemptions;
-    public ProtoId<AntagPrototype>[] AntagExemptions { get; set; } = antagExemptions;
+    public RoleTimeExemptionsData? Exemptions { get; set; } = exemptions;
+    public bool HasAdmin { get; set; } = hasAdmin;
 }
 
 public static class RoleTimeExemptionPanelEuiStateMsg
@@ -25,12 +25,6 @@ public static class RoleTimeExemptionPanelEuiStateMsg
     {
         public RoleTimeExemptions Exemptions { get; } = exemptions;
     }
-
-    [Serializable, NetSerializable]
-    public sealed class GetPlayerInfoRequest(string username) : EuiMessageBase
-    {
-        public string PlayerUsername { get; set; } = username;
-    }
 }
 
 /// <summary>
@@ -38,11 +32,6 @@ public static class RoleTimeExemptionPanelEuiStateMsg
 /// </summary>
 [Serializable, NetSerializable]
 public sealed record RoleTimeExemptions(
-    string? Target,
-    ProtoId<JobPrototype>[]? ExemptJobs,
-    ProtoId<AntagPrototype>[]? ExemptAntags)
-{
-    public readonly string? Target = Target;
-    public readonly ProtoId<JobPrototype>[]? ExemptJobs = ExemptJobs;
-    public readonly ProtoId<AntagPrototype>[]? ExemptAntags = ExemptAntags;
-}
+    List<ProtoId<JobPrototype>> ExemptJobs,
+    List<ProtoId<AntagPrototype>> ExemptAntags
+);

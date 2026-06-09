@@ -869,30 +869,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("INTEGER")
                         .HasColumnName("monkestation_role_time_exemptions_id");
 
-                    b.Property<Guid>("UserId")
-                        .HasColumnType("TEXT")
-                        .HasColumnName("user_id");
-
-                    b.HasKey("Id")
-                        .HasName("PK_monkestation_role_time_exemptions");
-
-                    b.HasIndex("UserId")
-                        .IsUnique();
-
-                    b.ToTable("monkestation_role_time_exemptions", (string)null);
-                });
-
-            modelBuilder.Entity("Content.Server.Database.MonkestationRoleTimeExemptionRole", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("monkestation_role_time_exemption_roles_id");
-
-                    b.Property<int>("ExemptionId")
-                        .HasColumnType("INTEGER")
-                        .HasColumnName("exemption_id");
-
                     b.Property<string>("RoleId")
                         .IsRequired()
                         .HasColumnType("TEXT")
@@ -903,16 +879,16 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("role_type");
 
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("user_id");
+
                     b.HasKey("Id")
-                        .HasName("PK_monkestation_role_time_exemption_roles");
+                        .HasName("PK_monkestation_role_time_exemptions");
 
-                    b.HasIndex("ExemptionId")
-                        .HasDatabaseName("IX_monkestation_role_time_exemption_roles_exemption_id");
+                    b.HasIndex("UserId");
 
-                    b.HasIndex("RoleType", "RoleId", "ExemptionId")
-                        .IsUnique();
-
-                    b.ToTable("monkestation_role_time_exemption_roles", (string)null);
+                    b.ToTable("monkestation_role_time_exemptions", (string)null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.PlayTime", b =>
@@ -1815,18 +1791,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("Profile");
                 });
 
-            modelBuilder.Entity("Content.Server.Database.MonkestationRoleTimeExemptionRole", b =>
-                {
-                    b.HasOne("Content.Server.Database.MonkestationRoleTimeExemption", "Exemption")
-                        .WithMany("Roles")
-                        .HasForeignKey("ExemptionId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired()
-                        .HasConstraintName("FK_monkestation_role_time_exemption_roles_monkestation_role_time_exemptions_exemption_id");
-
-                    b.Navigation("Exemption");
-                });
-
             modelBuilder.Entity("Content.Server.Database.Player", b =>
                 {
                     b.OwnsOne("Content.Server.Database.TypedHwid", "LastSeenHWId", b1 =>
@@ -2030,11 +1994,6 @@ namespace Content.Server.Database.Migrations.Sqlite
             modelBuilder.Entity("Content.Server.Database.ConnectionLog", b =>
                 {
                     b.Navigation("BanHits");
-                });
-
-            modelBuilder.Entity("Content.Server.Database.MonkestationRoleTimeExemption", b =>
-                {
-                    b.Navigation("Roles");
                 });
 
             modelBuilder.Entity("Content.Server.Database.Player", b =>

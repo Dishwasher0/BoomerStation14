@@ -13,40 +13,40 @@ public sealed class MsgRoleTimeExemptions : NetMessage
 {
     public override MsgGroups MsgGroup => MsgGroups.EntityEvent;
 
-    public List<ProtoId<JobPrototype>> JobBans = [];
-    public List<ProtoId<AntagPrototype>> AntagBans = [];
+    public List<ProtoId<JobPrototype>> JobExemptions = [];
+    public List<ProtoId<AntagPrototype>> AntagExemptions = [];
 
     public override void ReadFromBuffer(NetIncomingMessage buffer, IRobustSerializer serializer)
     {
         var jobCount = buffer.ReadVariableInt32();
-        JobBans.EnsureCapacity(jobCount);
+        JobExemptions.EnsureCapacity(jobCount);
 
         for (var i = 0; i < jobCount; i++)
         {
-            JobBans.Add(buffer.ReadString());
+            JobExemptions.Add(buffer.ReadString());
         }
 
         var antagCount = buffer.ReadVariableInt32();
-        AntagBans.EnsureCapacity(antagCount);
+        AntagExemptions.EnsureCapacity(antagCount);
 
         for (var i = 0; i < antagCount; i++)
         {
-            AntagBans.Add(buffer.ReadString());
+            AntagExemptions.Add(buffer.ReadString());
         }
     }
 
     public override void WriteToBuffer(NetOutgoingMessage buffer, IRobustSerializer serializer)
     {
-        buffer.WriteVariableInt32(JobBans.Count);
+        buffer.WriteVariableInt32(JobExemptions.Count);
 
-        foreach (var ban in JobBans)
+        foreach (var ban in JobExemptions)
         {
             buffer.Write(ban);
         }
 
-        buffer.WriteVariableInt32(AntagBans.Count);
+        buffer.WriteVariableInt32(AntagExemptions.Count);
 
-        foreach (var ban in AntagBans)
+        foreach (var ban in AntagExemptions)
         {
             buffer.Write(ban);
         }
