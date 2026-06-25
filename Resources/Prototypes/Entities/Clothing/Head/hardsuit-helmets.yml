@@ -218,10 +218,6 @@
       - state: equipped-head-vulpkanin
       - state: equipped-head-unshaded-vulpkanin
         shader: unshaded
-      head-reptilian:
-      - state: equipped-head-reptilian
-      - state: equipped-head-unshaded-reptilian
-        shader: unshaded
   - type: PointLight
     radius: 6
   - type: PressureProtection
