@@ -13,5 +13,9 @@
     <GuideEntityEmbed Entity="MobArachnid" Caption="Arachnid"/>
     <GuideEntityEmbed Entity="MobDiona" Caption="Diona"/>
     <GuideEntityEmbed Entity="MobDwarf" Caption="Dwarf"/>
+    <GuideEntityEmbed Entity="MobApid" Caption="Apid"/>
+    <GuideEntityEmbed Entity="MobDecapoid" Caption="Decapoid"/>
+    <GuideEntityEmbed Entity="MobGastropoid" Caption="Gastropoid"/>
+    <GuideEntityEmbed Entity="MobGray" Caption="Gray"/>
   </Box>
 </Document>
