@@ -11,10 +11,10 @@
   name: species-name-gastropoid
   text: "/ServerInfo/_MACRO/Guidebook/Mobs/Gastropoid.xml"
 
-- type: guideEntry
-  id: Apid
-  name: species-name-apid
-  text: "/ServerInfo/_MACRO/Guidebook/Mobs/Apid.xml"
+#- type: guideEntry
+#  id: Apid
+#  name: species-name-apid
+#  text: "/ServerInfo/_MACRO/Guidebook/Mobs/Apid.xml"
 
 - type: guideEntry
   id: Decapoid
