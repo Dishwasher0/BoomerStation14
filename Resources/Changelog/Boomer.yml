@@ -52,4 +52,25 @@ Entries:
   id: 7
   time: '2026-07-04T03:41:00.0000000+00:00'
   url: https://github.com/Monkestation/forky-station/pull/39
+- author: Skarletto
+  changes:
+  - message: Changed the sec glassed worn sprite to the old one
+    type: Tweak
+  id: 8
+  time: '2026-07-05T16:30:00.0000000+00:00'
+  url: https://github.com/Monkestation/forky-station/pull/40
+- author: adamsong
+  changes:
+  - message: Fixed pissing not showing you that you were pissing.
+    type: Fix
+  id: 9
+  time: '2026-07-05T16:30:00.0000000+00:00'
+  url: https://github.com/Monkestation/forky-station/pull/41
+- author: adamsong
+  changes:
+  - message: Added loud radio for command!
+    type: Add
+  id: 10
+  time: '2026-07-05T16:30:00.0000000+00:00'
+  url: https://github.com/Monkestation/forky-station/pull/42
 Order: 1
