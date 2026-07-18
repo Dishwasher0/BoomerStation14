@@ -4,8 +4,8 @@ meta:
   engineVersion: 277.2.1
   forkId: ""
   forkVersion: ""
-  time: 07/18/2026 20:40:20
-  entityCount: 14956
+  time: 07/18/2026 23:42:05
+  entityCount: 14999
 maps:
 - 1
 grids:
@@ -20155,6 +20155,41 @@ entities:
     - type: Transform
       pos: 61.5,-19.5
       parent: 2
+  - uid: 12458
+    components:
+    - type: Transform
+      pos: 60.5,-18.5
+      parent: 2
+  - uid: 12459
+    components:
+    - type: Transform
+      pos: 59.5,-18.5
+      parent: 2
+  - uid: 12466
+    components:
+    - type: Transform
+      pos: 59.5,-17.5
+      parent: 2
+  - uid: 12467
+    components:
+    - type: Transform
+      pos: 59.5,-16.5
+      parent: 2
+  - uid: 12468
+    components:
+    - type: Transform
+      pos: 60.5,-16.5
+      parent: 2
+  - uid: 12469
+    components:
+    - type: Transform
+      pos: 58.5,-16.5
+      parent: 2
+  - uid: 12471
+    components:
+    - type: Transform
+      pos: 59.5,-19.5
+      parent: 2
   - uid: 15015
     components:
     - type: Transform
@@ -30072,6 +30107,186 @@ entities:
     components:
     - type: Transform
       pos: 53.5,-19.5
+      parent: 2
+  - uid: 12131
+    components:
+    - type: Transform
+      pos: 57.5,-18.5
+      parent: 2
+  - uid: 12200
+    components:
+    - type: Transform
+      pos: 57.5,-17.5
+      parent: 2
+  - uid: 12201
+    components:
+    - type: Transform
+      pos: 57.5,-16.5
+      parent: 2
+  - uid: 12253
+    components:
+    - type: Transform
+      pos: 56.5,-16.5
+      parent: 2
+  - uid: 12277
+    components:
+    - type: Transform
+      pos: 56.5,-15.5
+      parent: 2
+  - uid: 12286
+    components:
+    - type: Transform
+      pos: 56.5,-14.5
+      parent: 2
+  - uid: 12287
+    components:
+    - type: Transform
+      pos: 56.5,-13.5
+      parent: 2
+  - uid: 12288
+    components:
+    - type: Transform
+      pos: 56.5,-12.5
+      parent: 2
+  - uid: 12289
+    components:
+    - type: Transform
+      pos: 56.5,-11.5
+      parent: 2
+  - uid: 12290
+    components:
+    - type: Transform
+      pos: 56.5,-10.5
+      parent: 2
+  - uid: 12291
+    components:
+    - type: Transform
+      pos: 56.5,-9.5
+      parent: 2
+  - uid: 12292
+    components:
+    - type: Transform
+      pos: 56.5,-8.5
+      parent: 2
+  - uid: 12303
+    components:
+    - type: Transform
+      pos: 56.5,-7.5
+      parent: 2
+  - uid: 12310
+    components:
+    - type: Transform
+      pos: 57.5,-7.5
+      parent: 2
+  - uid: 12311
+    components:
+    - type: Transform
+      pos: 58.5,-7.5
+      parent: 2
+  - uid: 12312
+    components:
+    - type: Transform
+      pos: 60.5,-7.5
+      parent: 2
+  - uid: 12313
+    components:
+    - type: Transform
+      pos: 61.5,-7.5
+      parent: 2
+  - uid: 12314
+    components:
+    - type: Transform
+      pos: 62.5,-7.5
+      parent: 2
+  - uid: 12315
+    components:
+    - type: Transform
+      pos: 59.5,-7.5
+      parent: 2
+  - uid: 12316
+    components:
+    - type: Transform
+      pos: 62.5,-8.5
+      parent: 2
+  - uid: 12317
+    components:
+    - type: Transform
+      pos: 62.5,-9.5
+      parent: 2
+  - uid: 12318
+    components:
+    - type: Transform
+      pos: 62.5,-10.5
+      parent: 2
+  - uid: 12319
+    components:
+    - type: Transform
+      pos: 62.5,-12.5
+      parent: 2
+  - uid: 12320
+    components:
+    - type: Transform
+      pos: 62.5,-13.5
+      parent: 2
+  - uid: 12321
+    components:
+    - type: Transform
+      pos: 62.5,-14.5
+      parent: 2
+  - uid: 12322
+    components:
+    - type: Transform
+      pos: 62.5,-15.5
+      parent: 2
+  - uid: 12323
+    components:
+    - type: Transform
+      pos: 62.5,-16.5
+      parent: 2
+  - uid: 12324
+    components:
+    - type: Transform
+      pos: 62.5,-11.5
+      parent: 2
+  - uid: 12325
+    components:
+    - type: Transform
+      pos: 61.5,-16.5
+      parent: 2
+  - uid: 12428
+    components:
+    - type: Transform
+      pos: 60.5,-16.5
+      parent: 2
+  - uid: 12432
+    components:
+    - type: Transform
+      pos: 59.5,-16.5
+      parent: 2
+  - uid: 12433
+    components:
+    - type: Transform
+      pos: 58.5,-16.5
+      parent: 2
+  - uid: 12445
+    components:
+    - type: Transform
+      pos: 59.5,-17.5
+      parent: 2
+  - uid: 12446
+    components:
+    - type: Transform
+      pos: 59.5,-18.5
+      parent: 2
+  - uid: 12450
+    components:
+    - type: Transform
+      pos: 59.5,-19.5
+      parent: 2
+  - uid: 12451
+    components:
+    - type: Transform
+      pos: 58.5,-19.5
       parent: 2
 - proto: CableMVStack
   entities:
@@ -45778,13 +45993,8 @@ entities:
       toggleActionEntity: 9
     - type: ContainerContainer
       containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
+        cell_slot: !type:ContainerSlot {}
         actions: !type:Container
-          showEnts: False
-          occludes: True
           ents:
           - 9
     - type: ActionsContainer
@@ -45797,13 +46007,8 @@ entities:
       toggleActionEntity: 11
     - type: ContainerContainer
       containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
+        cell_slot: !type:ContainerSlot {}
         actions: !type:Container
-          showEnts: False
-          occludes: True
           ents:
           - 11
     - type: ActionsContainer
@@ -71691,13 +71896,8 @@ entities:
       toggleActionEntity: 7
     - type: ContainerContainer
       containers:
-        cell_slot: !type:ContainerSlot
-          showEnts: False
-          occludes: True
-          ent: null
+        cell_slot: !type:ContainerSlot {}
         actions: !type:Container
-          showEnts: False
-          occludes: True
           ents:
           - 7
     - type: Physics
@@ -96944,7 +97144,7 @@ entities:
       pos: -38.5,9.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -106456.836
+      secondsUntilStateChange: -106480.06
       state: Opening
   - uid: 15007
     components:
@@ -96952,7 +97152,7 @@ entities:
       pos: -35.5,10.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -106457.336
+      secondsUntilStateChange: -106480.56
       state: Opening
 - proto: WoodenBench
   entities:
